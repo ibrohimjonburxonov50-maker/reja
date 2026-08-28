@@ -1,0 +1,367 @@
+/* --- 1. ASOSIY KONTEYNER (Layout) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f0f0f6;
+}
+
+.main_frame {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/* --- 2. CHAP SIDEBAR --- */
+.left_frame {
+    width: 300px;
+    background: #ffffff;
+    padding: 30px 20px;
+    flex-shrink: 0;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.02);
+}
+
+.left_1 {
+    text-align: center;
+}
+
+.left_1 img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.left_1 h2 {
+    font-size: 18px;
+    color: #2b2b2b;
+    margin-top: 10px;
+}
+
+.profession {
+    font-size: 13px;
+    color: #767676;
+    margin-bottom: 20px;
+}
+
+/* Social Ikonchalar */
+.left_icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 228px;
+    height: 22.8px;
+    margin: 0 auto 25px auto;
+}
+
+.link_href {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.icon {
+    width: 24px;
+    height: 22.8px;
+    border-radius: 50%;
+    background: #ffb400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ma'lumotlar */
+.info-list {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.info-item span:first-child {
+    background: #ffb400;
+    padding: 0 4px;
+    color: #2b2b2b;
+}
+
+.available {
+    color: #7eb942;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #f0f0f6;
+    margin: 20px 0;
+}
+
+/* Tillar va Ko'nikmalar */
+.skills-section h3, .extra-skills h3 {
+    font-size: 15px;
+    color: #2b2b2b;
+    margin-bottom: 12px;
+}
+
+.skill-bar {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.progress {
+    width: 100%;
+    height: 4px;
+    background: #f0f0f6;
+    border-radius: 2px;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+.progress-line {
+    height: 100%;
+    background: #ffb400;
+    border-radius: 2px;
+}
+
+.extra-skills ul {
+    list-style: none;
+    font-size: 12px;
+    color: #767676;
+}
+
+.extra-skills li {
+    margin-bottom: 6px;
+}
+
+
+/* --- 3. O'NG ASOSIY KONTENT --- */
+.right_content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+/* Banner */
+.hero-banner {
+    position: relative;
+    overflow: hidden;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    border-radius: 6px;
+    margin-bottom: 50px;
+}
+
+/* Banner orqa fonidagi kichik shakllar */
+.shape {
+    position: absolute;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.circle-1 {
+    width: 12px;
+    height: 12px;
+    border: 2px solid #7eb942;
+    border-radius: 50%;
+    top: 30px;
+    left: 40px;
+}
+
+.circle-2 {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ffb400;
+    border-radius: 50%;
+    bottom: 40px;
+    left: 55%;
+}
+
+.square-1 {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #ffb400;
+    top: 70px;
+    right: 80px;
+    transform: rotate(45deg);
+}
+
+.triangle-1 {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid #e74c3c;
+    bottom: 50px;
+    right: 40px;
+}
+
+.hero-text {
+    width: 55%;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 34px;
+    color: #2b2b2b;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 14px;
+    color: #767676;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.hire-btn {
+    display: inline-block;
+    background: #ffb400;
+    color: #2b2b2b;
+    padding: 10px 22px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 13px;
+    border-radius: 2px;
+}
+
+.hero-img {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.hero-img img {
+    max-width: 100%;
+    max-height: 320px;
+    object-fit: contain;
+}
+
+/* My Services Qismi */
+.services-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-section h2 {
+    font-size: 30px;
+    color: #2b2b2b;
+    margin-bottom: 15px;
+}
+
+.services-desc {
+    max-width: 450px;
+    margin: 0 auto 35px auto;
+    font-size: 13px;
+    color: #767676;
+    line-height: 1.5;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.service-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    color: #2b2b2b;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 13px;
+    color: #767676;
+    line-height: 1.4;
+}
+
+.order-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #ffb400;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+
+/* --- 4. O'NG TARAHDAGI MENYU PANEL --- */
+.right_nav_sidebar {
+    width: 80px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    gap: 25px;
+    flex-shrink: 0;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.02);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.theme-toggle {
+    width: 38px;
+    height: 38px;
+    background: #f0f0f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.nav_icons_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav_icon_item {
+    width: 38px;
+    height: 38px;
+    background: #f0f0f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav_icon_item:hover,
+.nav_icon_item.active {
+    background: #ffb400;
+    color: #ffffff;
+}
