@@ -81,8 +81,21 @@
 
 
 // Masalani yechimi:
-function countLetter(letter, word) {
-    return word.split(letter).length - 1;
+// function countLetter(letter, word) {
+//     return word.split(letter).length - 1;
+// }
+
+// console.log(countLetter("e", "engineer")); 
+
+//2-masala
+function countDigits(taskB) {
+  let soni = 0;
+  for (let i = 0; i < taskB.length; i++) {
+    if (taskB[i] >= "0" && taskB[i] <= "9") {
+      soni++;
+    }
+  }
+  return soni;
 }
 
-console.log(countLetter("e", "engineer")); 
+console.log(countDigits("ad2a54y79wet0sfgb9"));
