@@ -1,7 +1,7 @@
 console.log("Web Serverni boshlash");
 const express = require("express");
 const app = express();
-const http = require("http");
+
 const fs = require("fs");
 
 // let user;
@@ -28,17 +28,12 @@ app.post("/create-item", (req, res) => {
     // TODO: code with db here
 });
 
-app.get("/author", (req, res) => {
-    res.render("author", { user: user });
-});
+// app.get("/author", (req, res) => {
+//     res.render("author", { user: user });
+// });
 
 app.get("/", function (req, res) {
-  res.render("harid");
+  res.render("reja");
 });
 
-const server = http.createServer(app);
-let PORT = 3000;
-server.listen(PORT, function () {
-  console.log(`The server is running successfully on port: ${PORT}, https://localhost: ${PORT}`
-  );
-});
+module.exports = app;
