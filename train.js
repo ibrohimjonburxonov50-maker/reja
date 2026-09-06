@@ -99,3 +99,61 @@ function countDigits(taskB) {
 }
 
 console.log(countDigits("ad2a54y79wet0sfgb9"));
+
+//MIT Task C
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  
+  getCurrentTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    return `${hours}:${minutes}`;
+  }
+
+  // 1) Qoldiqni tekshirish metodi
+  qoldiq() {
+    const time = this.getCurrentTime();
+    console.log(`Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`);
+  }
+
+  // 2) Mahsulot sotish metodi (kamaytirish)
+  sotish(item, count) {
+    const time = this.getCurrentTime();
+    if (item === "non") {
+      this.non -= count;
+    } else if (item === "lag'mon" || item === "lagmon") {
+      this.lagmon -= count;
+    } else if (item === "cola") {
+      this.cola -= count;
+    }
+    console.log(`Hozir ${time}da ${count}ta ${item} sotildi.`);
+  }
+
+  // 3) Mahsulot qabul qilish metodi (qo'shish)
+  qabul(item, count) {
+    const time = this.getCurrentTime();
+    if (item === "non") {
+      this.non += count;
+    } else if (item === "lag'mon" || item === "lagmon") {
+      this.lagmon += count;
+    } else if (item === "cola") {
+      this.cola += count;
+    }
+    console.log(`Hozir ${time}da ${count}ta ${item} qabul qilindi.`);
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+
+shop.qoldiq(); 
+
+shop.sotish("non", 3); 
+shop.qabul("cola", 4); 
+
+shop.qoldiq();
