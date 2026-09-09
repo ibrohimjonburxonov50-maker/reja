@@ -88,72 +88,84 @@
 // console.log(countLetter("e", "engineer")); 
 
 //2-masala
-function countDigits(taskB) {
-  let soni = 0;
-  for (let i = 0; i < taskB.length; i++) {
-    if (taskB[i] >= "0" && taskB[i] <= "9") {
-      soni++;
-    }
-  }
-  return soni;
-}
+// function countDigits(taskB) {
+//   let soni = 0;
+//   for (let i = 0; i < taskB.length; i++) {
+//     if (taskB[i] >= "0" && taskB[i] <= "9") {
+//       soni++;
+//     }
+//   }
+//   return soni;
+// }
 
-console.log(countDigits("ad2a54y79wet0sfgb9"));
+// console.log(countDigits("ad2a54y79wet0sfgb9"));
 
 //MIT Task C
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
 
   
-  getCurrentTime() {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, "0");
-    const minutes = String(now.getMinutes()).padStart(2, "0");
-    return `${hours}:${minutes}`;
-  }
+//   getCurrentTime() {
+//     const now = new Date();
+//     const hours = String(now.getHours()).padStart(2, "0");
+//     const minutes = String(now.getMinutes()).padStart(2, "0");
+//     return `${hours}:${minutes}`;
+//   }
 
   // 1) Qoldiqni tekshirish metodi
-  qoldiq() {
-    const time = this.getCurrentTime();
-    console.log(`Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`);
-  }
+  // qoldiq() {
+  //   const time = this.getCurrentTime();
+  //   console.log(`Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`);
+  // }
 
   // 2) Mahsulot sotish metodi (kamaytirish)
-  sotish(item, count) {
-    const time = this.getCurrentTime();
-    if (item === "non") {
-      this.non -= count;
-    } else if (item === "lag'mon" || item === "lagmon") {
-      this.lagmon -= count;
-    } else if (item === "cola") {
-      this.cola -= count;
-    }
-    console.log(`Hozir ${time}da ${count}ta ${item} sotildi.`);
-  }
+  // sotish(item, count) {
+  //   const time = this.getCurrentTime();
+  //   if (item === "non") {
+  //     this.non -= count;
+  //   } else if (item === "lag'mon" || item === "lagmon") {
+  //     this.lagmon -= count;
+  //   } else if (item === "cola") {
+  //     this.cola -= count;
+  //   }
+  //   console.log(`Hozir ${time}da ${count}ta ${item} sotildi.`);
+  // }
 
   // 3) Mahsulot qabul qilish metodi (qo'shish)
-  qabul(item, count) {
-    const time = this.getCurrentTime();
-    if (item === "non") {
-      this.non += count;
-    } else if (item === "lag'mon" || item === "lagmon") {
-      this.lagmon += count;
-    } else if (item === "cola") {
-      this.cola += count;
-    }
-    console.log(`Hozir ${time}da ${count}ta ${item} qabul qilindi.`);
-  }
-}
+//   qabul(item, count) {
+//     const time = this.getCurrentTime();
+//     if (item === "non") {
+//       this.non += count;
+//     } else if (item === "lag'mon" || item === "lagmon") {
+//       this.lagmon += count;
+//     } else if (item === "cola") {
+//       this.cola += count;
+//     }
+//     console.log(`Hozir ${time}da ${count}ta ${item} qabul qilindi.`);
+//   }
+// }
 
-const shop = new Shop(4, 5, 2);
+// const shop = new Shop(4, 5, 2);
 
-shop.qoldiq(); 
+// shop.qoldiq(); 
 
-shop.sotish("non", 3); 
-shop.qabul("cola", 4); 
+// shop.sotish("non", 3); 
+// shop.qabul("cola", 4); 
 
-shop.qoldiq();
+// shop.qoldiq();
+
+
+//MIT TASK D
+
+const checkContent = (str1, str2) => 
+  str1.split("").sort().join("") === 
+  str2.split("").sort().join("");
+
+// Sinab ko'rish:
+console.log(checkContent("mitgroup", "gmtiprou")); // true
+console.log(checkContent("salom", "molas"));       // true
+console.log(checkContent("apple", "banana"));      // false
