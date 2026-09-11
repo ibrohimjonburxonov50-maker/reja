@@ -108,7 +108,7 @@
 //     this.cola = cola;
 //   }
 
-  
+
 //   getCurrentTime() {
 //     const now = new Date();
 //     const hours = String(now.getHours()).padStart(2, "0");
@@ -116,26 +116,26 @@
 //     return `${hours}:${minutes}`;
 //   }
 
-  // 1) Qoldiqni tekshirish metodi
-  // qoldiq() {
-  //   const time = this.getCurrentTime();
-  //   console.log(`Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`);
-  // }
+// 1) Qoldiqni tekshirish metodi
+// qoldiq() {
+//   const time = this.getCurrentTime();
+//   console.log(`Hozir ${time}da ${this.non}ta non, ${this.lagmon}ta lag'mon va ${this.cola}ta cola mavjud`);
+// }
 
-  // 2) Mahsulot sotish metodi (kamaytirish)
-  // sotish(item, count) {
-  //   const time = this.getCurrentTime();
-  //   if (item === "non") {
-  //     this.non -= count;
-  //   } else if (item === "lag'mon" || item === "lagmon") {
-  //     this.lagmon -= count;
-  //   } else if (item === "cola") {
-  //     this.cola -= count;
-  //   }
-  //   console.log(`Hozir ${time}da ${count}ta ${item} sotildi.`);
-  // }
+// 2) Mahsulot sotish metodi (kamaytirish)
+// sotish(item, count) {
+//   const time = this.getCurrentTime();
+//   if (item === "non") {
+//     this.non -= count;
+//   } else if (item === "lag'mon" || item === "lagmon") {
+//     this.lagmon -= count;
+//   } else if (item === "cola") {
+//     this.cola -= count;
+//   }
+//   console.log(`Hozir ${time}da ${count}ta ${item} sotildi.`);
+// }
 
-  // 3) Mahsulot qabul qilish metodi (qo'shish)
+// 3) Mahsulot qabul qilish metodi (qo'shish)
 //   qabul(item, count) {
 //     const time = this.getCurrentTime();
 //     if (item === "non") {
@@ -161,11 +161,18 @@
 
 //MIT TASK D
 
-const checkContent = (str1, str2) => 
-  str1.split("").sort().join("") === 
-  str2.split("").sort().join("");
+// const checkContent = (str1, str2) => 
+//   str1.split("").sort().join("") === 
+//   str2.split("").sort().join("");
 
 // Sinab ko'rish:
-console.log(checkContent("mitgroup", "gmtiprou")); // true
-console.log(checkContent("salom", "molas"));       // true
-console.log(checkContent("apple", "banana"));      // false
+// console.log(checkContent("mitgroup", "gmtiprou")); // true
+// console.log(checkContent("salom", "molas"));       // true
+// console.log(checkContent("apple", "banana"));      // false
+
+function getReverse(str) {
+  return str.split("").reverse().join("");
+}
+
+console.log(getReverse("hello"));
+console.log(getReverse("mitgroup")); 
