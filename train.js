@@ -170,9 +170,20 @@
 // console.log(checkContent("salom", "molas"));       // true
 // console.log(checkContent("apple", "banana"));      // false
 
-function getReverse(str) {
-  return str.split("").reverse().join("");
+// MIT TASK E
+// function getReverse(str) {
+//   return str.split("").reverse().join("");
+// }
+
+// console.log(getReverse("hello"));
+// console.log(getReverse("mitgroup")); 
+
+// MIT TASK F
+function findDoublers(str) {
+  const uniqueChars = new Set(str);
+  return uniqueChars.size !== str.length;
 }
 
-console.log(getReverse("hello"));
-console.log(getReverse("mitgroup")); 
+console.log(findDoublers("hello")); // true ('l' harfi takrorlangan)
+console.log(findDoublers("world")); // false (hamma harflar har xil)
+console.log(findDoublers("mit"));   // false (hamma harflar har xil)
